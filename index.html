@@ -1,9 +1,4 @@
 ```html
----
-layout: null
-title: Pankreas Bivirkningsapp
----
-
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -70,13 +65,13 @@ title: Pankreas Bivirkningsapp
       text-rendering: optimizeLegibility;
     }
 
-    .app-page {
+    .page {
       width: min(100% - 24px, 680px);
       margin: 0 auto;
       padding: 32px 0 48px;
     }
 
-    .app-card {
+    .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -97,7 +92,6 @@ title: Pankreas Bivirkningsapp
 
     h1 {
       margin: 0 0 14px;
-      color: var(--text);
       font-size: clamp(29px, 6vw, 38px);
       font-weight: 750;
       line-height: 1.15;
@@ -140,7 +134,6 @@ title: Pankreas Bivirkningsapp
     .download-btn:hover {
       background: var(--blue-hover);
       color: #ffffff;
-      text-decoration: none;
     }
 
     .download-btn:active {
@@ -158,7 +151,7 @@ title: Pankreas Bivirkningsapp
       border-top: 1px solid var(--border);
     }
 
-    .instructions > h2 {
+    .instructions h2 {
       margin: 0 0 18px;
       font-size: 23px;
       font-weight: 750;
@@ -253,7 +246,7 @@ title: Pankreas Bivirkningsapp
     }
 
     @media (max-width: 520px) {
-      .app-page {
+      .page {
         width: min(100% - 20px, 680px);
         padding:
           max(14px, env(safe-area-inset-top))
@@ -261,7 +254,7 @@ title: Pankreas Bivirkningsapp
           max(34px, env(safe-area-inset-bottom));
       }
 
-      .app-card {
+      .card {
         padding: 27px 18px;
         border-radius: 14px;
       }
@@ -306,13 +299,10 @@ title: Pankreas Bivirkningsapp
 </head>
 
 <body>
-
-  <main class="app-page">
-
-    <div class="app-card">
+  <main class="page">
+    <div class="card">
 
       <header class="header">
-
         <h1>Pankreas Bivirkningsapp</h1>
 
         <p class="intro">
@@ -322,25 +312,22 @@ title: Pankreas Bivirkningsapp
 
         <a
           class="download-btn"
-          href="{{ '/PankreasBivirkningsApp.v.1.html' | relative_url }}"
+          href="./PankreasBivirkningsApp.v.1.html"
           download="PankreasBivirkningsApp.v.1.html"
         >
           Hent bivirkningsappen
         </a>
-
       </header>
 
       <section
         class="instructions"
         aria-labelledby="guide-title"
       >
-
         <h2 id="guide-title">Sådan kommer du i gang</h2>
 
         <div class="steps">
 
           <div class="step">
-
             <div
               class="step-number"
               aria-hidden="true"
@@ -354,11 +341,9 @@ title: Pankreas Bivirkningsapp
                 Tryk på den blå knap ovenfor.
               </p>
             </div>
-
           </div>
 
           <div class="step">
-
             <div
               class="step-number"
               aria-hidden="true"
@@ -373,11 +358,9 @@ title: Pankreas Bivirkningsapp
                 blandt dine hentede filer.
               </p>
             </div>
-
           </div>
 
           <div class="step">
-
             <div
               class="step-number"
               aria-hidden="true"
@@ -391,24 +374,21 @@ title: Pankreas Bivirkningsapp
                 Tryk på filen. Næste gang åbner du den samme fil igen.
               </p>
             </div>
-
           </div>
 
         </div>
-
       </section>
 
       <section
         class="warning"
         aria-labelledby="warning-title"
       >
-
         <h2 id="warning-title">
           Vigtigt om dine registreringer
         </h2>
 
         <p>
-          Registreringerne gemmes på din enhed og kan gå tabt,
+          Registreringerne gemmes lokalt på din enhed og kan gå tabt,
           hvis browserdata slettes, eller hvis enheden nulstilles.
         </p>
 
@@ -416,7 +396,6 @@ title: Pankreas Bivirkningsapp
           <strong>Gem derfor jævnligt en rapport i appen.</strong>
           Rapporten kan bruges til at gendanne dine tidligere registreringer.
         </p>
-
       </section>
 
       <p class="privacy">
@@ -424,9 +403,7 @@ title: Pankreas Bivirkningsapp
       </p>
 
     </div>
-
   </main>
-
 </body>
 </html>
 ```
