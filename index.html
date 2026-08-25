@@ -1,86 +1,143 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pankreas Bivirkningsapp</title>
+---
+layout: default
+title: Pankreas Bivirkningsapp
+---
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #1f2937;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+<style>
+  .app-page {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    text-align: center;
+  }
+
+  .app-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 36px 28px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+  }
+
+  .app-card h1 {
+    margin: 0 0 18px;
+    font-size: clamp(28px, 6vw, 38px);
+    line-height: 1.15;
+    color: #1f2937;
+  }
+
+  .intro {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.55;
+    color: #4b5563;
+  }
+
+  .download-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding: 18px 22px;
+    border-radius: 12px;
+    background: #005eb8;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.3;
+    transition:
+      background 0.15s ease,
+      transform 0.15s ease;
+  }
+
+  .download-btn:hover,
+  .download-btn:focus {
+    background: #004b93;
+    color: #ffffff !important;
+  }
+
+  .download-btn:active {
+    transform: translateY(1px);
+  }
+
+  .instructions {
+    margin-top: 26px;
+    text-align: left;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .instructions h2 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    color: #1f2937;
+  }
+
+  .instructions ol {
+    margin: 0;
+    padding-left: 22px;
+    color: #4b5563;
+    line-height: 1.7;
+  }
+
+  .note {
+    margin: 22px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6b7280;
+  }
+
+  @media (max-width: 480px) {
+    .app-page {
+      padding: 20px 12px 40px;
     }
 
-    .card {
-      width: min(92%, 520px);
-      background: white;
-      padding: 32px;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      text-align: center;
+    .app-card {
+      padding: 28px 20px;
     }
 
-    h1 {
-      margin-top: 0;
-      font-size: 2rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.5;
-      color: #4b5563;
+    .intro {
+      font-size: 17px;
     }
 
     .download-btn {
-      display: block;
-      margin-top: 28px;
-      padding: 18px 24px;
-      background: #0b5cab;
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-size: 1.2rem;
-      font-weight: 700;
+      font-size: 18px;
+      padding: 18px;
     }
+  }
+</style>
 
-    .download-btn:hover {
-      background: #084a8a;
-    }
+<div class="app-page">
+  <div class="app-card">
 
-    .small {
-      margin-top: 20px;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-  </style>
-</head>
-
-<body>
-
-  <main class="card">
     <h1>Pankreas Bivirkningsapp</h1>
 
-    <p>
-      Hent appen til din telefon for at registrere bivirkninger under din behandling.
+    <p class="intro">
+      Hent bivirkningsappen til din telefon for at registrere bivirkninger under din behandling.
     </p>
 
     <a
       class="download-btn"
-      href="PankreasBivirkningsApp.v.1.html"
+      href="{{ '/PankreasBivirkningsApp.v.1.html' | relative_url }}"
       download="PankreasBivirkningsApp.v.1.html">
       Hent bivirkningsappen
     </a>
 
-    <p class="small">
-      Filen gemmes på din telefon og kan derefter åbnes i din browser.
-    </p>
-  </main>
+    <div class="instructions">
+      <h2>Sådan gør du</h2>
 
-</body>
-</html>
+      <ol>
+        <li>Tryk på knappen ovenfor.</li>
+        <li>Gem filen på din telefon.</li>
+        <li>Åbn den gemte HTML-fil i din browser.</li>
+      </ol>
+    </div>
+
+    <p class="note">
+      De oplysninger, du registrerer i appen, gemmes lokalt på din enhed.
+    </p>
+
+  </div>
+</div>
